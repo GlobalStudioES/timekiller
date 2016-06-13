@@ -5,8 +5,6 @@
 # Timekiller
 It lets call any function with a timeout!
 
-Note: It works in main thread and processes (not work in threads)
-
 ## Install
 
 ```bash
@@ -57,3 +55,5 @@ def long_function():
 
 long_function()
 ```
+TODO:
+ - It works in main thread and processes (not work in threads)
