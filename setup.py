@@ -28,7 +28,7 @@ changelog = read_md('CHANGELOG.md')
 
 setup(
     name='timekiller',
-    version='0.0.1',
+    version='0.0.2',
     description='It lets call any function with a timeout',
     long_description=readme + '\n\n' + changelog,
     author='Alberto Galera Jimenez',
