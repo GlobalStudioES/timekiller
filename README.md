@@ -17,7 +17,7 @@ Link pypi: https://pypi.python.org/pypi/timekiller
 
 ## Call function
 ```python
-import timekiller
+from timekiller import timeout, call
 import time
 
 
@@ -27,10 +27,10 @@ def long_function(foo, bar):
         print(foo, bar)
 
 # call(func, max_time, *args, **kwargs)
-timekiller.call(long_function, 5, "woo", bar="Uhmm")
+call(long_function, 5, "woo", bar="Uhmm")
 
 
-@timekiller.timeout(5)
+@timeout(5)
 def long_function_with_decorator(foo, bar)
     while True:
         time.sleep(10)
@@ -42,7 +42,7 @@ long_function_with_decorator("woo", "Uhmm")
 ## Capture exception
 
 ```python
-import timekiller
+from timekiller import timeout, TimeoutException
 import time
 
 
@@ -50,7 +50,7 @@ import time
 def long_function():
     try:
         time.sleep(10)
-    except timekiller.TimeoutException:
+    except TimeoutException:
         print("capture exception")
 
 long_function()
